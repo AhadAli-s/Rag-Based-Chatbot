@@ -1,3 +1,15 @@
+---
+title: RAG-Based Chatbot
+emoji: 📚
+colorFrom: blue
+colorTo: purple
+sdk: gradio
+sdk_version: 6.1.0
+app_file: app.py
+pinned: false
+license: mit
+---
+
 # RAG-Based Chatbot with PDF Support
 
 A Retrieval-Augmented Generation (RAG) chatbot that accepts multiple PDF documents and answers questions based on their content using Groq LLM and Gradio UI.
@@ -58,15 +70,6 @@ RAG (Retrieval-Augmented Generation) combines information retrieval with languag
 4. **Access the interface:**
    Open your browser and go to `http://localhost:7860`
 
-### Hugging Face Spaces Deployment
-
-1. **Create a new Space** on Hugging Face Spaces
-2. **Upload all files** (app.py, requirements.txt, apt.txt, README.md)
-3. **Add your Groq API Key** as a secret:
-   - Go to Settings → Secrets
-   - Add a secret named `GROQ_API_KEY` with your API key value
-4. **The app will automatically deploy**
-
 ## Usage
 
 1. **Upload PDFs**: Click "Upload PDF Files" and select one or more PDF documents
@@ -91,20 +94,4 @@ rag/
 - **LLM**: Groq `llama-3.1-8b-instant` (updated from deprecated llama3-8b-8192)
 - **Chunking**: Semantic chunking with 500-word chunks and 100-word overlap
 - **Retrieval**: Top-3 most relevant chunks using cosine similarity
-- **UI Framework**: Gradio 4.0+
-
-## Challenges Faced
-
-1. **PDF Text Extraction**: Some PDFs have complex layouts that require careful text extraction
-2. **Chunking Strategy**: Finding the right balance between chunk size and overlap for optimal retrieval
-3. **Context Window**: Managing context length to fit within LLM token limits while including relevant information
-4. **Source Attribution**: Tracking which chunk came from which PDF and page number for accurate citations
-
-## Screenshots
-
-*Add screenshots of your running application here*
-
-## License
-
-This project is created for educational purposes as part of a RAG assignment.
-
+- **UI Framework**: Gradio 6.1.0+
